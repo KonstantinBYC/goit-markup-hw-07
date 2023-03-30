@@ -22,70 +22,77 @@
 <body>
   <header class="header">
 
-    <a href="./index.html" class="header-logo">Web<span>Studio</span></a>
-    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-cont">
-      <svg width="29.54" height="18.62">
-        <use href="./images/menu-icon.svg"></use>
-      </svg>
-    </button>
 
     <div class="container header-container">
-      <nav class="header-nav">
-        <a href="./index.html" class="header-logo">Web<span>Studio</span></a>
-        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-cont">
-          <svg width="29.54" height="18.62" fill="currentColor">
-            <use href="./images/menu-icon.svg"></use>
-          </svg>
-        </button>
+      <a href="./index.html" class="header-logo">Web<span>Studio</span></a>
+
+      <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+
+        <svg width="32" height="22" viewBox="0 0 32 22" xmlns="http://www.w3.org/2000/svg">
+          <path id="menu-icon" d="M1.34814 20.0431H30.8866M1.34814 10.7354H30.8866M1.34814 1.42773H30.8866"
+            stroke="#2E2F42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
 
 
-        <div class="mobile-cont">
-          <div class="menu-container js-menu-container" id="mobile-menu">
-            <button type="button" class="x-button menu-toggle js-close-menu">
-              <svg class="x-icon" width="8" height="8">
-                <use href="./images/x-sign.svg#vector"></use>
-              </svg>
-            </button>
-          </div>
+      <div class="mobile-cont js-menu-container" id="mobile-menu">
+
+        <nav class="header-nav">
+          <button type="button" class="x-button close-toggle js-close-menu">
+            <svg class="x-icon" width="8" height="8">
+              <use href="./images/x-sign.svg#vector"></use>
+            </svg>
+
+          </button>
           <ul class="header-ul">
             <li class="header-item"><a class="header-link active link" href="./index.html">Studio</a></li>
             <li class="header-item"><a class="header-link link " href="./portfolio.html">Portfolio</a></li>
             <li class="header-item"><a class="header-link link " href="">Contacts</a></li>
           </ul>
+        </nav>
+        <div class="header-cont">
           <address class="address">
             <ul class="address-list">
+
               <li class="address-item"><a class="address-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
               <li class="address-item"><a class="address-tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+
+
+
             </ul>
           </address>
+
           <div class="social-media-header">
-            <ul class="social-list-header">
-              <li class="social-item">
-                <a class="social-link" href="">
-                  <svg class="social-icon" width="24" height="24">
+            <ul class="header-social-list">
+              <li class="header-social-item">
+                <a class="header-social-link" href="">
+                  <svg class="header-social-icon" width="24" height="24">
                     <use href="./images/symbol-defs.svg#icon-instagram">
                     </use>
                   </svg>
                 </a>
               </li>
-              <li class="social-item">
-                <a class="social-link" href="">
-                  <svg class="social-icon" width="24" height="24">
+
+              <li class="header-social-item">
+                <a class="header-social-link" href="">
+                  <svg class="header-social-icon" width="24" height="24">
                     <use href="./images/symbol-defs.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
-              <li class="social-item">
-                <a class="social-link" href="">
-                  <svg class="social-icon" width="24" height="24">
+
+              <li class="header-social-item">
+                <a class="header-social-link" href="">
+                  <svg class="header-social-icon" width="24" height="24">
                     <use href="./images/symbol-defs.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
-              <li class="social-item">
-                <a class="social-link" href="">
-                  <svg class="social-icon" width="24" height="24">
+
+              <li class="header-social-item">
+                <a class="header-social-link" href="">
+                  <svg class="header-social-icon" width="24" height="24">
                     <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                   </svg>
                 </a>
@@ -94,24 +101,8 @@
             </ul>
           </div>
         </div>
-        <div class="desk-nav">
-          <ul class="header-ul">
-            <li class="header-item"><a class="header-link active link" href="./index.html">Studio</a></li>
-            <li class="header-item"><a class="header-link link " href="./portfolio.html">Portfolio</a></li>
-            <li class="header-item"><a class="header-link link " href="">Contacts</a></li>
-          </ul>
-      </nav>
-      <address class="address">
-        <ul class="address-list">
-          <li class="address-item"><a class="address-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-          </li>
-          <li class="address-item"><a class="address-tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
-        </ul>
-      </address>
-    </div>
 
-
-    </div>
+      </div>
   </header>
   <!--                     - Hero-                 -->
   <main>
@@ -184,7 +175,7 @@
       </div>
     </section>
 
-    <!-- Section 3-->
+    <!--                                 Section 3-->
     <section class="product-container">
       <div class="container">
         <h2 class="product">What are we doing</h2>
@@ -196,11 +187,12 @@
       </div>
     </section>
 
-    <!-- Section 4-->
+    <!--                                  Section 4-->
     <section class="ourteam">
+
+
       <div class="team-container container">
         <h2 class="team">Our Team</h2>
-
         <ul class="team-list">
 
           <li class="team-list-member">
@@ -358,8 +350,9 @@
     </section>
     <!--                          CUSTOMERS                    -->
     <section class="customers-section ">
+      <h2 class="customers">Customers</h2>
       <div class="customers-container container">
-        <h2 class="customers">Customers</h2>
+
 
         <ul class="customers-list">
           <li class="customers-item">

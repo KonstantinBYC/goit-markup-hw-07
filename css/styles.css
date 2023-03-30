@@ -51,15 +51,16 @@ a {
   margin: -1px;
 }
 .container {
-  width: 1158px;
+  max-width: 1158px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 767) {
   .container {
-    width: 100%;
-    padding: 0 16;
+    max-width: 767px;
+    padding: 0 16px;
     margin: 0;
     border: 1px red solid;
   }
@@ -77,14 +78,18 @@ img {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 25.5px;
+    padding-bottom: 23.5px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 70px;
+  }
+}
 .header-container {
   display: flex;
   align-items: center;
-}
-@media screen and (max-width: 767px) {
-  .header-container {
-    display: none;
-  }
 }
 
 .header-nav {
@@ -103,7 +108,16 @@ img {
 }
 @media screen and (max-width: 767px) {
   .header-ul {
-    display: none;
+    display: block;
+    margin: 56px auto auto 0px;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-item {
+    display: block;
+    margin: 0px auto 40px 0px;
+    padding: 0;
   }
 }
 .header-logo {
@@ -121,7 +135,8 @@ img {
 }
 @media screen and (max-width: 767) {
   .header-logo {
-    margin: 0 auto 0 0;
+    display: block;
+    margin-left: 0px;
   }
 }
 .header-link {
@@ -138,8 +153,12 @@ img {
 }
 @media screen and (max-width: 767px) {
   .header-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
     padding: 0;
-    margin: 80px auto 40px 40px;
+
     border: 1px red solid;
   }
 }
@@ -173,7 +192,6 @@ address {
 @media screen and (max-width: 767px) {
   address {
     margin: 0;
-    border: 1px red solid;
   }
 }
 .address-list {
@@ -182,8 +200,9 @@ address {
   gap: 40px;
 }
 @media screen and (max-width: 767px) {
-  address {
+  .address-list {
     display: block;
+
     border: 1px red solid;
   }
 }
@@ -194,8 +213,13 @@ address {
 @media screen and (max-width: 767px) {
   .address-mail {
     display: block;
-    margin: auto 35 40 40;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: auto auto 40px 0;
     border: 1px red solid;
+    order: 2;
   }
 }
 .address-tel {
@@ -205,12 +229,28 @@ address {
 @media screen and (max-width: 767px) {
   .address-tel {
     display: block;
-    margin: 0 auto 48 40;
+    max-height: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: var(--primary-brand-color);
+    margin: 0 auto 48px 0;
     border: 1px red solid;
+  }
+}
+@media screen and (max-width: 424px) {
+  .address-tel {
+    font-size: 25px;
   }
 }
 .active {
   color: var(--pressed-state-color);
+}
+@media screen and (max-width: 767px) {
+  .active {
+    color: var(--secondary-title-color);
+  }
 }
 .header-link:hover,
 .header-link:focus,
@@ -219,43 +259,6 @@ address {
 .address-tel:hover,
 .address-tel:focus {
   color: var(--pressed-state-color);
-}
-/* -------------------------social-links--------------------------- */
-.social-list-header {
-  display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .social-list-header {
-    display: flex;
-    gap: calc((100%-160) / 3);
-    list-style: none;
-    border: 1px red solid;
-  }
-}
-.social-item {
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  margin: auto 0px;
-
-  background-color: rgba(255, 255, 255, 0.1);
-  opacity: 0.9;
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-link:hover,
-.social-link:focus,
-.social-item:hover,
-.social-item:focus {
-  background-color: var(--success-color);
 }
 
 /* -----------------------------------hero-------------------------- */
@@ -349,6 +352,11 @@ address {
   transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 767px) {
+  .backdrop {
+    overflow-y: scroll;
+  }
+}
 .modal {
   width: 408px;
   min-height: 576px;
@@ -367,11 +375,10 @@ address {
 }
 @media screen and (max-width: 767px) {
   .modal {
-    margin: 96px 18px auto;
-    /* width: 392px; */
-    min-height: 586px;
+    display: block;
+    width: calc(100% - 36px);
     padding: 24px 16px;
-  }
+      }
 }
 .x-button {
   display: flex;
@@ -414,22 +421,13 @@ address {
   fill: var(--main-title-color);
 }
 /* ----------------Adv-------------------------- */
-.advan-list {
-  display: flex;
-}
-@media screen and (max-width: 767px) {
-  .advan-list {
-    display: block;
-    width: 30%;
-    border: 1px red solid;
-  }
-}
+
 .advantages {
   padding: 120px 0 120px 0;
 }
 @media screen and (max-width: 767px) {
   .advantages {
-    padding: 96px 0px;
+    padding: 96px 0px 22px;
     border: 1px red solid;
   }
 }
@@ -464,8 +462,8 @@ address {
   .advantages-item {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
+    text-align: center;
+    margin-top: 0px;
     margin-bottom: 8px;
     border: 1px red solid;
   }
@@ -480,34 +478,28 @@ address {
   margin: 0px;
   padding: 0px;
 }
+
 @media screen and (max-width: 767px) {
   .advantages-desc {
     margin-bottom: 72px;
     border: 1px red solid;
   }
 }
-/* .adv-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 0px 100px;
-  margin: 0px;
-} */
 
 .advlist-item {
-  max-width: 264px;
+  width: 264px;
   margin-right: 24px;
 }
-/* @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .advlist-item {
-    display: none;
+    width: 100%;
   }
-} */
+}
 .advlist-item:last-child {
   margin-right: 0px;
 }
 
-/* -------------product-------------- */
+/* --                 product                   -- */
 .product-container {
   margin-top: 0px;
   padding-bottom: 120px;
@@ -550,7 +542,8 @@ address {
 @media screen and (max-width: 767px) {
   .ourteam {
     width: 100%;
-    padding: 96px 82px;
+    padding: 96px auto;
+    margin: 0;
     border: 1px red solid;
   }
 }
@@ -563,11 +556,18 @@ address {
 }
 @media screen and (max-width: 767px) {
   .team-list-member {
-    width: 264px;
+    display: block;
+    width: 100%;
+    margin-bottom: 72px;
     border: 1px red solid;
+  }
+  .team-list-member:last-child {
+    margin-bottom: 0px;
   }
 }
 .team {
+  display: block;
+  width: 100%;
   font-size: 36px;
   line-height: 1.11;
   /* identical to box height, or 111% */
@@ -590,20 +590,17 @@ address {
 @media screen and (max-width: 767px) {
   .team-list {
     display: block;
-    width: 100%;
+    width: 264px;
     border: 1px red solid;
+    padding: 0;
+    margin: 0px auto;
   }
 }
 .team-item-text {
   margin: 0;
   padding: 32px 16px;
 }
-@media screen and (max-width: 767px) {
-  .team-item-text {
-    padding: 32px 0px;
-    border: 1px red solid;
-  }
-}
+
 .team-member {
   font-weight: 500;
   font-size: 20px;
@@ -613,16 +610,14 @@ address {
 
   color: var(--secondary-title-color);
   text-align: center;
-  margin: 0px auto 0px;
+  margin: 0px auto;
   padding: 0;
 }
 
 .team-position {
   font-size: 16px;
   line-height: 1.5;
-  /* identical to box height, or 150% */
   letter-spacing: 0.02em;
-  /* SLATE */
   color: var(--text-color);
   text-align: center;
   margin: 8px auto 0px;
@@ -677,9 +672,7 @@ address {
 }
 @media screen and (max-width: 767px) {
   .customers-section {
-    width: 100%;
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding: 96px 0px;
     border: 1px red solid;
   }
 }
@@ -692,6 +685,7 @@ address {
   color: var(--secondary-title-color);
   text-align: center;
   margin-bottom: 72px;
+  border: 1px red solid;
 }
 
 .customers-list {
@@ -702,9 +696,18 @@ address {
 @media screen and (max-width: 767px) {
   .customers-list {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 72px 16px;
+    border: 1px red solid;
+  }
+}
+@media screen and (max-width: 386px) {
+  .customers-list {
+    width: 100%;
+    justify-content: center;
+
+    gap: 16px;
     border: 1px red solid;
   }
 }
@@ -727,7 +730,7 @@ address {
 }
 @media screen and (max-width: 767px) {
   .customers-anc {
-    width: 190px;
+    width: calc ((100% - 16px) / 2);
     border: 1px red solid;
   }
 }
@@ -747,16 +750,16 @@ address {
   border-color: var(--pressed-state-color);
   fill: var(--pressed-state-color);
 }
-/* ----------------------------footer---------------------- */
+
+/* --                       footer                         -- */
 .footer {
   background-color: var(--secondary-title-color);
   width: 100%;
-  padding: 100px 0 100px 0;
+  padding: 100px 0px;
 }
 @media screen and (max-width: 767px) {
   .footer {
-    padding: 97.5 auto 96;
-    border: 1px red solid;
+    padding: 96px 0px;
   }
 }
 .footer-container {
@@ -767,7 +770,8 @@ address {
 @media screen and (max-width: 767px) {
   .footer-container {
     display: block;
-    max-width: 767px;
+    text-align: center;
+    width: 100%;
     border: 1px red solid;
   }
 }
@@ -821,7 +825,7 @@ address {
 }
 @media screen and (max-width: 767px) {
   .footer-desc {
-    margin: 0;
+    margin: 0px auto;
     max-width: 268px;
     border: 1px red solid;
   }
@@ -835,6 +839,7 @@ address {
   margin: 0px 0px 16px 0px;
   padding: 0px;
 }
+
 @media screen and (max-width: 767px) {
   .footer-social-title {
     display: block;
@@ -881,7 +886,7 @@ address {
 }
 @media screen and (max-width: 767px) {
   .subs-title {
-    margin: 0 auto 16px;
+    text-align: center;
     border: 1px red solid;
   }
 }
@@ -902,7 +907,6 @@ address {
 @media screen and (max-width: 767px) {
   .email-foot {
     width: 100%;
-    border: 1px red solid;
   }
 }
 .email-foot:hover,
@@ -953,7 +957,6 @@ address {
   background-color: var(--pressed-state-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
 /* -------------------------social-links--------------------------- */
 .social {
   height: 40px;
@@ -963,10 +966,12 @@ address {
   display: flex;
   gap: 16px;
   list-style: none;
+      border: 1px red solid;
 }
-.social-item {
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (max-width: 767px) {
+.social-list {
+ justify-content: center;
+}
 }
 .social-link {
   display: flex;
@@ -980,6 +985,12 @@ address {
   opacity: 0.9;
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-item {
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-icon {
 }
 
 .social-link:hover,
@@ -1017,7 +1028,7 @@ address {
 @media screen and (max-width: 767px) {
   .button-list {
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 0px auto 48px 0px;
     border: 1px red solid;
   }
@@ -1064,8 +1075,8 @@ address {
 @media screen and (max-width: 767px) {
   .portfolio-list {
     display: block;
-    margin: 0 0 48 0;
-    border: 1px red solid;
+    padding: 0px;
+    align-items: center;
   }
 }
 .pf-item-text {
@@ -1083,6 +1094,7 @@ address {
   letter-spacing: 0.02em;
   /* NAVY BLUE */
   color: var(--secondary-title-color);
+  border: 1px red solid;
 }
 
 .portfolio-desc {
@@ -1133,12 +1145,32 @@ address {
 .portfolio-item {
   width: calc((100% - 2 * 24px) / 3);
 }
+
 .portfolio-item:nth-child(3n + 3) {
   margin-right: 0px;
 }
 .portfolio-item:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
+@media screen and (max-width: 767px) {
+  .portfolio-item {
+    width: 100%;
+    max-width: 360px;
+        margin: 0px auto 48px;
+    border: 1px red solid;
+  }
+  .portfolio-item:nth-child(3n + 3) {
+  margin-right: auto;
+}
+}
+  .portfolio-item:nth-last-child(-n + 3) {
+    margin-bottom: 48px;
+  }
+  .portfolio-item:last-child {
+    margin-bottom: 0px;
+  }
+}
+
 .portfolio-anc {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
