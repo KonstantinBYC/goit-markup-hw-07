@@ -1,0 +1,76 @@
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 1199px;
+    padding: 0 16px;
+    margin: 0;
+    border: 1px red solid;
+  }
+  .header {
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+  }
+  .header-link.active::after {
+    left: 0px;
+    bottom: -23.5px;
+  }
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 12px;
+  }
+  .hero {
+    width: 100%;
+    height: 100%;
+    padding-top: 112px;
+    padding-bottom: 112px;
+    margin: 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/tablet-bg.jpg');
+  }
+  .modal {
+    width: calc(100% - 36px);
+    padding: 24px 16px;
+    min-height: 586px;
+  }
+
+  .advantages {
+    padding: 96px 0px;
+    border: 1px red solid;
+  }
+
+  .adv-icon {
+    display: none;
+  }
+
+  .advantages-desc {
+    margin-bottom: 72px;
+    border: 1px red solid;
+  }
+
+  .advlist-item {
+    width: 356px;
+    border: 1px red solid;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .customers-section {
+    padding: 96px auto;
+  }
+  .customers-list {
+    width: 552px;
+    margin: 0px auto;
+    flex-wrap: wrap;
+  }
+  .footer {
+    padding: 96px auto 96px 108px;
+  }
+  .footer-container {
+    flex-wrap: wrap;
+    border: 1px red solid;
+  }
+}
