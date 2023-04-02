@@ -66,25 +66,32 @@ img {
   border: 1px solid var(--accent-color);
   padding-top: 24px;
   padding-bottom: 24px;
-  margin: 0;
+  margin: 0px;
+
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
 .header-container {
   display: flex;
+
   align-items: center;
 }
-
 .header-nav {
   display: flex;
   align-items: center;
 }
-
 .header-ul {
   display: flex;
   align-items: center;
   gap: 40px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .header-logo {
@@ -96,6 +103,11 @@ img {
   /* NAVY BLUE */
   color: var(--primary-brand-color);
   margin-right: 76px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-logo {
+    margin-right: 0px;
+  }
 }
 .header-logo > span {
   color: var(--secondary-title-color);
@@ -125,7 +137,11 @@ img {
   left: 0px;
   bottom: -23.5px;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-link.active::after {
+    bottom: -25.6px;
+  }
+}
 .header-ul > .header-link.active:active {
   color: var(--pressed-state-color);
 }
@@ -134,16 +150,49 @@ address {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin: 0 0 0 auto;
+  margin: 0px 0px 0px auto;
   color: var(--secondary-title-color);
 }
+/* .address-cont {
+  display: flex;
+  border: 1px red solid;
+  padding: 0px;
+  gap: 40px;
+  margin: 0px 0px 0px auto;
+} */
 
 .address-list {
   display: flex;
-  padding: 0;
+
+  padding: 0px;
   gap: 40px;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address-list {
+    font-size: 12px;
+    line-height: 1.11;
+    letter-spacing: 0.04em;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .address-desktop {
+    display: none;
+  }
+  .address-tablet {
+    font-size: 12px;
+    line-height: 1.11;
+    letter-spacing: 0.04em;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0px;
+    margin-right: 0px;
+    margin-left: auto;
+  }
+}
 .address-mail {
   color: var(--secondary-title-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -183,7 +232,20 @@ address {
   background-position: center;
   background-size: cover;
 }
-
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('../images/hero@2x.jpg');
+  }
+}
+@media (min-device-pixel-ratio: 3),
+  (min-resolution: 192dpi),
+  (min-resolution: 3dppx) {
+  .hero {
+    background-image: url('../images/hero@3x.jpg');
+  }
+}
 .hero-title {
   font-size: 56px;
   line-height: 1.07;
@@ -296,7 +358,7 @@ address {
 /* ----------------Adv-------------------------- */
 
 .advantages {
-  padding: 120px 0 120px 0;
+  padding: 120px 0px;
 }
 
 .adv-icon {
@@ -334,7 +396,6 @@ address {
     text-align: left;
     margin-top: 0px;
     margin-bottom: 8px;
-    border: 1px red solid;
   }
 }
 .advantages-desc {
@@ -352,6 +413,9 @@ address {
   width: 264px;
   margin-right: 24px;
 }
+.advan-list {
+  display: flex;
+}
 @media screen and (max-width: 1199px) {
   .advlist-item {
     width: 356px;
@@ -362,7 +426,6 @@ address {
     flex-wrap: wrap;
     gap: 72px 24px;
     margin: 0;
-    border: 1px red solid;
   }
 }
 .advlist-item:last-child {
@@ -445,7 +508,6 @@ address {
   text-align: center;
   padding: 0px;
   margin: 0px auto 72px;
-  border: 1px red solid;
 }
 
 .team-list {
@@ -455,10 +517,8 @@ address {
 }
 @media screen and (max-width: 1199px) {
   .team-list {
-    border: 1px red solid;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: center;
   }
 }
 .team-item-text {
@@ -589,14 +649,12 @@ address {
   width: 100%;
   padding: 100px 0px;
   margin: 0px;
-  border: 1px red solid;
 }
 
 .footer-container {
   display: flex;
   justify-content: flex-start;
   max-width: 1158px;
-  border: 1px red solid;
 }
 
 .footer-logo {
@@ -610,8 +668,6 @@ address {
   color: var(--primary-brand-color);
   padding-right: 0px;
   margin: 0px;
-
-  border: 1px red solid;
 }
 
 .footer-logo > span {
@@ -622,13 +678,11 @@ address {
   max-width: 700px;
   padding: 0;
   margin: 0px 120px 0px 0px;
-  border: 1px red solid;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-container-logo {
     display: block;
     margin: 0px 24px 72px 108px;
-    border: 1px red solid;
   }
   .footer-desc {
     margin-top: 7.5px;
@@ -639,7 +693,6 @@ address {
   display: block;
   margin: 0px;
   padding: 0;
-  border: 1px red solid;
 }
 
 .footer-desc {
@@ -651,7 +704,6 @@ address {
   margin: 16px 0 0 0px;
   padding: 0px;
   max-width: 264px;
-  border: 1px red solid;
 }
 
 .footer-social-title {
@@ -662,17 +714,14 @@ address {
   color: var(--accent-color);
   margin: 0px 0px 16px 0px;
   padding: 0px;
-  border: 1px red solid;
 }
 
 .form-box {
   margin-left: auto;
-  border: 1px red solid;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .form-box {
     margin-left: 108px;
-    border: 1px red solid;
   }
 }
 .form-footer {
@@ -681,8 +730,6 @@ address {
   padding: 0px;
   margin: 0px;
   align-items: center;
-  border: 1px red solid;
-  border: 1px red solid;
 }
 .subs-title {
   display: block;
@@ -695,7 +742,6 @@ address {
   color: var(--main-title-color);
   margin-bottom: 16px;
   margin-left: auto;
-  border: 1px red solid;
 }
 
 .email-foot {
@@ -741,7 +787,7 @@ address {
   margin-left: 24px;
   cursor: pointer;
   outline: none;
-  border: 1px red solid;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -765,7 +811,6 @@ address {
   display: flex;
   gap: 16px;
   list-style: none;
-  border: 1px red solid;
 }
 
 .social-link {
@@ -864,7 +909,6 @@ address {
   letter-spacing: 0.02em;
   /* NAVY BLUE */
   color: var(--secondary-title-color);
-  border: 1px red solid;
 }
 
 .portfolio-desc {

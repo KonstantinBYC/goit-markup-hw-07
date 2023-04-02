@@ -24,7 +24,6 @@
 <body>
   <header class="header">
 
-
     <div class="container header-container">
       <a href="./index.html" class="header-logo">Web<span>Studio</span></a>
 
@@ -40,28 +39,27 @@
       <div class="mobile-cont js-menu-container" id="mobile-menu">
 
         <nav class="header-nav">
+
           <button type="button" class="x-button close-toggle js-close-menu">
             <svg class="x-icon" width="8" height="8">
               <use href="./images/x-sign.svg#vector"></use>
             </svg>
-
           </button>
+
           <ul class="header-ul">
             <li class="header-item"><a class="header-link active link" href="./index.html">Studio</a></li>
             <li class="header-item"><a class="header-link link " href="./portfolio.html">Portfolio</a></li>
             <li class="header-item"><a class="header-link link " href="">Contacts</a></li>
           </ul>
         </nav>
-        <div class="header-cont">
-          <address class="address">
-            <ul class="address-list">
 
+        <div class="address-cont">
+
+          <address class="address">
+            <ul class="address-list address-desktop">
               <li class="address-item"><a class="address-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
               <li class="address-item"><a class="address-tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
-
-
-
             </ul>
           </address>
 
@@ -105,6 +103,18 @@
         </div>
 
       </div>
+      <div class="address-tablet">
+        <address class="address">
+          <ul class="address-list">
+
+            <li class="address-item"><a class="address-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+            <li class="address-item"><a class="address-tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+
+          </ul>
+        </address>
+      </div>
+    </div>
   </header>
   <!--                     - Hero-                 -->
   <main>
@@ -182,9 +192,12 @@
       <div class="container">
         <h2 class="product">What are we doing</h2>
         <ul class="product-list">
-          <li class="product-item"><img src="./images/image-1.jpg" alt="Monitor" width="360"></li>
-          <li class="product-item"><img src="./images/image-2.jpg" alt="Smartphone layers" width="360"></li>
-          <li class="product-item"><img src="./images/image-3.jpg" alt="Smartphone" width="360"></li>
+          <li class="product-item"><img srcset="../images/pr-1.jpg 1x, ../images/pr-1@2x.jpg 2x"
+              src="../images/pr-1.jpg" alt="Monitor" width="360"></li>
+          <li class="product-item"><img srcset="../images/pr-2.jpg 1x, ../images/pr-2@2x.jpg 2x" src="./images/pr-2.jpg"
+              alt="Smartphone layers" width="360"></li>
+          <li class="product-item"><img srcset="../images/pr-3.jpg 1x, ../images/pr-3@2x.jpg 2x" src="./images/pr-3.jpg"
+              alt="Smartphone" width="360"></li>
         </ul>
       </div>
     </section>
@@ -198,7 +211,8 @@
         <ul class="team-list">
 
           <li class="team-list-member">
-            <img src="./images/OT1.jpg" alt="Mark Guerrero" width="264">
+            <img srcset="../images/tm1.jpg 1x, ../images/tm1@2x.jpg 2x" src="./images/tm1.jpg" alt="Mark Guerrero"
+              width="264">
             <div class="team-item-text">
               <h3 class="team-member">Mark Guerrero</h3>
               <p class="team-position">Product Designer</p>
@@ -236,7 +250,8 @@
 
           </li>
           <li class="team-list-member">
-            <img src="./images/OT2.jpg" alt="Tom Ford" width="264">
+            <img srcset="../images/tm2.jpg 1x, ../images/tm2@2x.jpg 2x" src="./images/tm2.jpg" alt="Tom Ford"
+              width="264">
             <div class="team-item-text">
               <h3 class="team-member">Tom Ford</h3>
               <p class="team-position">Frontend Developer</p>
@@ -274,7 +289,8 @@
             </div>
           </li>
           <li class="team-list-member">
-            <img src="./images/OT3.jpg" alt="Camila Garcia" width="264">
+            <img srcset="../images/tm3.jpg 1x, ../images/tm3@2x.jpg 2x" src="./images/tm3.jpg" alt="Camila Garcia"
+              width="264">
             <div class="team-item-text">
               <h3 class="team-member">Camila Garcia</h3>
               <p class="team-position">Marketing</p>
@@ -311,7 +327,8 @@
             </div>
           </li>
           <li class="team-list-member">
-            <img src="./images/OT4.jpg" alt="Daniel Wilson" width="264">
+            <img srcset="../images/tm4.jpg 1x, ../images/tm4@2x.jpg 2x" src="./images/tm4.jpg" alt="Daniel Wilson"
+              width="264">
             <div class="team-item-text">
               <h3 class="team-member">Daniel Wilson</h3>
               <p class="team-position">UI Designer</p>

@@ -16,14 +16,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@100;400;500;700;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./css/tablet.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/mobile.css">
-    <link rel="stylesheet" href="./css/tablet.css">
+
 </head>
 
 <body>
     <header class="header">
-
 
         <div class="container header-container">
             <a href="./index.html" class="header-logo">Web<span>Studio</span></a>
@@ -40,31 +40,29 @@
             <div class="mobile-cont js-menu-container" id="mobile-menu">
 
                 <nav class="header-nav">
+
                     <button type="button" class="x-button close-toggle js-close-menu">
                         <svg class="x-icon" width="8" height="8">
                             <use href="./images/x-sign.svg#vector"></use>
                         </svg>
-
                     </button>
+
                     <ul class="header-ul">
-                        <li class="header-item"><a class="header-link  link" href="./index.html">Studio</a></li>
-                        <li class="header-item"><a class="header-link active link "
-                                href="./portfolio.html">Portfolio</a></li>
+                        <li class="header-item"><a class="header-link active link" href="./index.html">Studio</a></li>
+                        <li class="header-item"><a class="header-link link " href="./portfolio.html">Portfolio</a></li>
                         <li class="header-item"><a class="header-link link " href="">Contacts</a></li>
                     </ul>
                 </nav>
-                <div class="header-cont">
-                    <address class="address">
-                        <ul class="address-list">
 
+                <div class="address-cont">
+
+                    <address class="address">
+                        <ul class="address-list address-desktop">
                             <li class="address-item"><a class="address-mail"
                                     href="mailto:info@devstudio.com">info@devstudio.com</a>
                             </li>
                             <li class="address-item"><a class="address-tel" href="tel:+110001111111">+11 (000)
                                     111-11-11</a></li>
-
-
-
                         </ul>
                     </address>
 
@@ -108,8 +106,21 @@
                 </div>
 
             </div>
-    </header>
+            <div class="address-tablet">
+                <address class="address">
+                    <ul class="address-list">
 
+                        <li class="address-item"><a class="address-mail"
+                                href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                        <li class="address-item"><a class="address-tel" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                        </li>
+
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
     <!-- Hero-->
 
     <main>
@@ -118,7 +129,8 @@
             <div class="container">
                 <h1 class="portfolio-title visually-hidden">Product`s list</h1>
                 <ul class="button-list">
-                    <li><a href="./portfolio.html"><button type="button" class="button-item">All</button></a> </li>
+                    <li><a href="./portfolio.html"><button href="./portfolio.html" type="button"
+                                class="button-item">All</button></a> </li>
                     <li><a href="./website.html"><button type="button" class="button-item">Web Site</button></a></li>
                     <li><a href="./app.html"><button type="button" class="button-item">App</button></a></li>
                     <li><a href="./design.html"><button type="button" class="button-item">Design</button></a></li>
@@ -352,6 +364,7 @@
         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
         crossorigin="anonymous"></script>
     <script defer src="js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 
