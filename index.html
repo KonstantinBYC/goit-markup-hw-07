@@ -35,17 +35,8 @@
         </svg>
       </button>
 
-
-      <div class="mobile-cont js-menu-container" id="mobile-menu">
-
+      <div class="wide-container">
         <nav class="header-nav">
-
-          <button type="button" class="x-button close-toggle js-close-menu">
-            <svg class="x-icon" width="8" height="8">
-              <use href="./images/x-sign.svg#vector"></use>
-            </svg>
-          </button>
-
           <ul class="header-ul">
             <li class="header-item"><a class="header-link active link" href="./index.html">Studio</a></li>
             <li class="header-item"><a class="header-link link " href="./portfolio.html">Portfolio</a></li>
@@ -56,64 +47,85 @@
         <div class="address-cont">
 
           <address class="address">
-            <ul class="address-list address-desktop">
+            <ul class="address-list address-tablet">
               <li class="address-item"><a class="address-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
               <li class="address-item"><a class="address-tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
             </ul>
           </address>
-
-          <div class="social-media-header">
-            <ul class="header-social-list">
-              <li class="header-social-item">
-                <a class="header-social-link" href="">
-                  <svg class="header-social-icon" width="24" height="24">
-                    <use href="./images/symbol-defs.svg#icon-instagram">
-                    </use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="header-social-item">
-                <a class="header-social-link" href="">
-                  <svg class="header-social-icon" width="24" height="24">
-                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="header-social-item">
-                <a class="header-social-link" href="">
-                  <svg class="header-social-icon" width="24" height="24">
-                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="header-social-item">
-                <a class="header-social-link" href="">
-                  <svg class="header-social-icon" width="24" height="24">
-                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-
-            </ul>
-          </div>
         </div>
 
       </div>
-      <div class="address-tablet">
-        <address class="address">
-          <ul class="address-list">
 
-            <li class="address-item"><a class="address-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </li>
-            <li class="address-item"><a class="address-tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+      <div class="mobile-container js-menu-container" id="mobile-menu">
+        <div class="mob-horiz">
+          <nav class="header-nav">
 
-          </ul>
-        </address>
+            <button type="button" class="x-button close-toggle js-close-menu">
+              <svg class="x-icon" width="8" height="8">
+                <use href="./images/x-sign.svg#vector"></use>
+              </svg>
+            </button>
+
+            <ul class="header-ul">
+              <li class="header-item"><a class="header-link active link" href="./index.html">Studio</a></li>
+              <li class="header-item"><a class="header-link link " href="./portfolio.html">Portfolio</a></li>
+              <li class="header-item"><a class="header-link link " href="">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <div class="address-cont">
+
+            <address class="address">
+              <ul class="address-list address-desktop">
+                <li class="address-item"><a class="address-tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                <li class="address-item"><a class="address-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+
+              </ul>
+            </address>
+
+            <div class="social-media-header">
+              <ul class="header-social-list">
+                <li class="header-social-item">
+                  <a class="header-social-link" href="">
+                    <svg class="header-social-icon" width="24" height="24">
+                      <use href="./images/symbol-defs.svg#icon-instagram">
+                      </use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header-social-item">
+                  <a class="header-social-link" href="">
+                    <svg class="header-social-icon" width="24" height="24">
+                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header-social-item">
+                  <a class="header-social-link" href="">
+                    <svg class="header-social-icon" width="24" height="24">
+                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header-social-item">
+                  <a class="header-social-link" href="">
+                    <svg class="header-social-icon" width="24" height="24">
+                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </header>
   <!--                     - Hero-                 -->
@@ -131,6 +143,8 @@
     <section class="advantages">
       <div class="container">
         <h2 class="adv-title visually-hidden">Advantages</h2>
+
+
         <ul class="advan-list">
           <li class="advlist-item">
 
@@ -211,7 +225,7 @@
         <ul class="team-list">
 
           <li class="team-list-member">
-            <img srcset="../images/tm1.jpg 1x, ../images/tm1@2x.jpg 2x" src="./images/tm1.jpg" alt="Mark Guerrero"
+            <img srcset="./images/tm1.jpg 1x, ./images/tm1@2x.jpg 2x" src="./images/tm1.jpg" alt="Mark Guerrero"
               width="264">
             <div class="team-item-text">
               <h3 class="team-member">Mark Guerrero</h3>
@@ -250,8 +264,7 @@
 
           </li>
           <li class="team-list-member">
-            <img srcset="../images/tm2.jpg 1x, ../images/tm2@2x.jpg 2x" src="./images/tm2.jpg" alt="Tom Ford"
-              width="264">
+            <img srcset="./images/tm2.jpg 1x, ./images/tm2@2x.jpg 2x" src="./images/tm2.jpg" alt="Tom Ford" width="264">
             <div class="team-item-text">
               <h3 class="team-member">Tom Ford</h3>
               <p class="team-position">Frontend Developer</p>
@@ -289,7 +302,7 @@
             </div>
           </li>
           <li class="team-list-member">
-            <img srcset="../images/tm3.jpg 1x, ../images/tm3@2x.jpg 2x" src="./images/tm3.jpg" alt="Camila Garcia"
+            <img srcset="./images/tm3.jpg 1x, ./images/tm3@2x.jpg 2x" src="./images/tm3.jpg" alt="Camila Garcia"
               width="264">
             <div class="team-item-text">
               <h3 class="team-member">Camila Garcia</h3>
@@ -327,7 +340,7 @@
             </div>
           </li>
           <li class="team-list-member">
-            <img srcset="../images/tm4.jpg 1x, ../images/tm4@2x.jpg 2x" src="./images/tm4.jpg" alt="Daniel Wilson"
+            <img srcset="./images/tm4.jpg 1x, ./images/tm4@2x.jpg 2x" src="./images/tm4.jpg" alt="Daniel Wilson"
               width="264">
             <div class="team-item-text">
               <h3 class="team-member">Daniel Wilson</h3>
@@ -554,11 +567,14 @@
               <svg class="icon-check" width="12" height="10">
                 <use href="./images/icons.svg#icon-check"></use>
               </svg></span>
-            I accept the terms and conditions of the&nbsp;<a class="privacy" href="#">Privacy Policy</a></label>
+
+            I accept the terms and conditions of the&nbsp;<a class="privacy" href="#">Privacy
+              Policy</a>
+
+          </label>
         </div>
 
         <button type="submit" class="send-button">Send</button>
-
 
 
       </form>

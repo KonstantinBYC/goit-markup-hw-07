@@ -1,26 +1,11 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .container {
-    max-width: 1199px;
-    padding: 0 16px;
-    margin: 0;
-    border: 1px red solid;
-  }
-  .header {
-    padding-top: 0px;
-    padding-bottom: 16px;
-  }
-  .header-container {
-    justify-content: space-between;
-  }
   .header-ul {
-    margin: 0px auto 0px 0px;
+    margin: 0px;
   }
-
-  .address-cont {
-    display: none;
+  .container {
+    max-width: 736px;
   }
   .address-tablet {
-    display: flex;
     font-size: 12px;
     line-height: 1.11;
     letter-spacing: 0.04em;
@@ -28,11 +13,12 @@
     gap: 12px;
     padding: 0px;
     margin-right: 0px;
+    margin-left: auto;
   }
 
   .header-link.active::after {
     left: 0px;
-    bottom: -23.5px;
+    bottom: -5px;
   }
 
   .hero {
@@ -47,29 +33,11 @@
       ),
       url('../images/tablet-bg.jpg');
   }
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .hero {
-      background-image: url('../images/tablet-bg@2x.jpg');
-    }
-  }
-  @media (min-device-pixel-ratio: 3),
-    (min-resolution: 192dpi),
-    (min-resolution: 3dppx) {
-    .hero {
-      background-image: url('../images/tablet-bg@3x.jpg');
-    }
-  }
+
   .modal {
     width: calc(100% - 36px);
     padding: 24px 16px;
     min-height: 586px;
-  }
-
-  .advantages {
-    padding: 96px 0px;
-    border: 1px red solid;
   }
 
   .adv-icon {
@@ -78,27 +46,46 @@
 
   .advantages-desc {
     margin-bottom: 72px;
-    border: 1px red solid;
   }
 
   .advlist-item {
-    width: 356px;
-    border: 1px red solid;
+    width: calc((100% - 24px) / 2);
   }
 
-  .customers-section {
+  .footer {
     padding: 96px auto;
   }
-  .customers-list {
-    width: 552px;
-    margin: 0px auto;
-    flex-wrap: wrap;
-  }
-  .footer {
-    padding: 96px auto 96px 108px;
-  }
   .footer-container {
+    max-width: 584px;
     flex-wrap: wrap;
-    border: 1px red solid;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 429px) and (max-width: 767px),
+  (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/tablet-bg@2x.jpg');
+  }
+}
+@media (min-device-pixel-ratio: 3),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/tablet-bg@3x.jpg');
   }
 }
