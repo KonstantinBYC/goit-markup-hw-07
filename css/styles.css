@@ -207,6 +207,7 @@ address {
 }
 
 /* -----------------------------------hero-------------------------- */
+
 .hero {
   max-width: 1440px;
   padding-top: 188px;
@@ -217,7 +218,7 @@ address {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('../images/hero.jpg');
+    url('../images/desk-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -228,26 +229,38 @@ address {
     padding-bottom: 112px;
   }
 }
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 1),
+  screen and (min-width: 768px) and (min-resolution: 96dpi),
+  screen and (min-width: 768px) and (min-resolution: 1dppx) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/hero@2x.jpg');
+      url('../images/desk-bg.jpg');
   }
 }
-@media (min-device-pixel-ratio: 3),
-  (min-resolution: 288dpi),
-  (min-resolution: 3dppx) {
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/hero@3x.jpg');
+      url('../images/desk-bg@2x.jpg');
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 3),
+  screen and (min-width: 768px) and (min-resolution: 288dpi),
+  screen and (min-width: 768px) and (min-resolution: 3dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/desk-bg@3x.jpg');
   }
 }
 .hero-title {
@@ -410,9 +423,12 @@ address {
     margin-top: 0px;
     margin-bottom: 8px;
   }
+  .advantages-desc {
+    font-weight: 500;
+  }
 }
 .advantages-desc {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -421,7 +437,6 @@ address {
   margin: 0px;
   padding: 0px;
 }
-
 .advlist-item {
   width: 264px;
   margin-right: 24px;
@@ -603,7 +618,7 @@ address {
 /* ---------------CUSTOMERS----------------------------- */
 
 .customers-container {
-  max-width: 582px;
+  max-width: 1128px;
   background-color: var(--main-title-color);
 }
 .customers-section {
@@ -628,7 +643,15 @@ address {
   justify-content: center;
   gap: 24px;
 }
+.customers-item {
+  width: 168px;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .customers-container {
+    max-width: 582px;
+    background-color: var(--main-title-color);
+  }
   .customers-section {
     padding: 96px auto;
   }
@@ -639,7 +662,7 @@ address {
     gap: 72px 24px;
   }
   .customers-item {
-    min-width: 190px;
+    width: 168px;
   }
 }
 
@@ -686,7 +709,11 @@ address {
   justify-content: flex-start;
   max-width: 1158px;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-container {
+    max-width: 582px;
+  }
+}
 .footer-logo {
   display: inline-block;
   font-family: 'Raleway';
@@ -712,7 +739,7 @@ address {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-container-logo {
     display: block;
-    margin: 0px 24px 72px 108px;
+    margin: 0px 24px 72px 0px;
   }
   .footer-desc {
     margin-top: 7.5px;
@@ -751,7 +778,7 @@ address {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .form-box {
-    margin-left: 108px;
+    margin-left: 0px;
   }
 }
 .form-footer {
@@ -1105,23 +1132,18 @@ address {
   padding: 8px auto auto 16px;
 }
 .privacy {
-  display: block;
   color: var(--primary-brand-color);
   text-decoration: underline;
 }
-.privacy-desc {
-  width: 100%;
-  display: inline-block;
-}
+
 .form-checkbox {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.33;
   letter-spacing: 4%;
   color: var(--subtle-text-color);
 
   display: flex;
-
   width: 100%;
   align-items: center;
 
@@ -1129,7 +1151,7 @@ address {
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-checkbox span {
+.form-checkbox .span-check {
   display: flex;
   flex-shrink: 0;
   justify-content: center;
@@ -1145,7 +1167,7 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-privacy:checked + .form-checkbox span {
+.form-privacy:checked + .form-checkbox .span-check {
   background-color: var(--pressed-state-color);
   border-color: var(--pressed-state-color);
   fill: var(--main-title-color);
