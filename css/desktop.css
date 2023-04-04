@@ -1,0 +1,34 @@
+@media screen and (min-device-pixel-ratio: 1) and (min-width: 768px),
+  screen and (min-width: 768px) and (min-resolution: 96dpi),
+  screen and (min-width: 768px) and (min-resolution: 1dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/desk-bg.jpg');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/desk-bg@2x.jpg');
+  }
+}
+@media screen and (min-device-pixel-ratio: 3) and (min-width: 768px),
+  screen and (min-width: 768px) and (min-resolution: 288dpi),
+  screen and (min-width: 768px) and (min-resolution: 3dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/desk-bg@3x.jpg');
+  }
+}
