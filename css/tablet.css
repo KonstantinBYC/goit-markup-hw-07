@@ -38,10 +38,6 @@
     display: none;
   }
 
-  .advantages-desc {
-    margin-bottom: 72px;
-  }
-
   .advlist-item {
     width: calc((100% - 24px) / 2);
   }
@@ -50,7 +46,7 @@
     padding: 96px auto;
   }
   .footer-container {
-    max-width: 584px;
+    max-width: 582px;
     flex-wrap: wrap;
   }
 }
@@ -70,7 +66,7 @@
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/mobile-bg.jpg');
+      url('../images/tablet-bg.jpg');
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 429px) and (max-width: 767px),

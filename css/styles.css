@@ -624,7 +624,7 @@ address {
 /* ---------------CUSTOMERS----------------------------- */
 
 .customers-container {
-  max-width: 1128px;
+  max-width: 1158px;
   background-color: var(--main-title-color);
 }
 .customers-section {
@@ -655,7 +655,6 @@ address {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .customers-container {
-    max-width: 582px;
     background-color: var(--main-title-color);
   }
   .customers-section {
